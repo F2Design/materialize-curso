@@ -1,0 +1,122 @@
+/* Materialize trabaja por defecto con display-flex. Voy a resetear los estilos por default */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  height: 500px;
+}
+
+header nav {
+  height: 100px;
+  background: white;
+  box-shadow: none;
+}
+
+nav .brand-logo {
+  height: 100px;
+  left: 15%;
+}
+
+nav .brand-logo img {
+  width: 52px;
+}
+
+header nav ul {
+  height: 100px;
+}
+
+header ul a {
+  color: grey;
+}
+
+.header-main-pic {
+  width: 100%;
+  height: 400px;
+  background-image: url("../assets/img/Banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card .card-title.activator {
+  cursor: pointer;
+}
+
+/* Para reescribir y agregar estilos a mi clase es ponerlos pegados para que pueda reescribir y darle estilos a mi clase
+esto es para centrar el search horizontalmente por eso primero pongo la clase de Materialize y pegado la clase que yo hice para 
+que pueda aplicar el cascade */
+.input-field.input-container {
+  height: 100px;
+  float: none;
+  display: flex;
+  margin: 0 auto;
+}
+/* Ahora tomo la clase de Materialize, luego el sistema de adherencia de css le digo que busque a un hijo, que es mas importante
+con un id # y que sea search, es decir search esta dentro de la clase .input-field.
+Es decir el padre .input-field y de forma directa tiene que buscar a su hijo #search */
+.input-field > #search {
+  margin-top: 25px;
+}
+
+/* Ahora le daré estilos a al icono lupa tenemos el input-container y el icono es una etiqueta <i> */
+.input-container i {
+  margin-top: 45px;
+  margin-right: 15px;
+}
+
+/* ahora la etiqueta footer y pegado la clase, pegado por que estoy agregando estilos a la etiqueta de footer 
+quiero agregar estilos personalizados*/
+footer.page-footer {
+  height: auto;
+  background: gray;
+  bottom: 0;
+}
+
+/* Post.html */
+.post-pic {
+  width: 100%;
+  height: 400px;
+  /* Esta página es para traer imagenes solo cambio las dimensiones */
+  background-image: url("https://picsum.photos/1000/400");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Registro */
+.registro-titulo {
+  margin-top: 80px;
+}
+
+.registro-header {
+  height: 400px;
+}
+
+.parallax-container {
+  width: 100%;
+  min-height: 400px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+
+.section.no-pad-bot {
+  padding-bottom: 0;
+}
+
+.social {
+  margin-right: 1rem;
+}
